@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 160%;  /*espaçamento entre linhas*/
+
+    background-image: url(./bg.jpg);
+    background-position: top center;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-color: #121214;
+}
+
+header {
+    padding: 32px;
+    height: calc(120px + 32px);
+}
+
+header div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    animation: animation1 .5s .3s backwards;
+}
+
+header img {
+    border-radius: 50%;
+    width: 100px;
+
+    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
+    padding: 3px;
+}
+
+body main {
+    max-width: 580px;
+    width: 90%;
+    margin: auto;
+
+    display: grid;
+    gap: 24px;
+
+    margin-bottom: 32px;
+}
+
+section h2 {
+    color: #fff;
+}
+
+section p {
+    color: #A1A1AA;
+}
+
+section{
+    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
+    padding-top: 4px;
+    border-radius: 10px;
+
+    animation: animation2 .7s .3s backwards;
+}
+
+section div {
+    background-color: #2A2634;
+    padding: 32px;
+    padding-top: 24px;
+    border-radius: 8px;
+}
+
+.film-list img {
+    width: 90px;
+    border-radius: 8px;
+    
+    transition: transform .3s;
+}
+
+.actor-list img {
+    border-radius: 100%;
+    width: 70px;
+    height: 70px;
+
+    transition: transform .3s;
+}
+
+section ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+
+    margin-top: 24px;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+img:hover {
+    transform: scale(1.1)
+}
+
+header div:hover {
+    transition: transform .3s;
+}
+
+main section:nth-child(1) {
+    animation-delay: 0;
+}
+
+main section:nth-child(2) {
+    animation-delay: .4s;
+}
+
+main section:nth-child(3) {
+    animation-delay: .8s;
+}
+
+
+@keyframes animation1 {
+    from {
+        opacity: 0;
+        transform: translateY(-30px); 
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0); 
+    }
+}
+
+@keyframes animation2 {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
